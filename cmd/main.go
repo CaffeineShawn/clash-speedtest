@@ -191,7 +191,7 @@ func deferSpeedtest() {
 			if err == nil {
 				log.Info().Msgf("Selected %s for online serfing🏄🏻, bandwidth: %s/s, latency: %dms, enjoy!", optimumNodeResult.Name, formatMeter(optimumNodeResult.BS), optimumNodeResult.ConnectDuration.Milliseconds())
 			} else {
-				log.Error().Msgf("Select node: %s error, reason: %s", optimumNodeResult.Name, err)
+				log.Error().Msgf("Select node: %s error, reason: %v", optimumNodeResult.Name, err)
 			}
 			results = nil
 		}
