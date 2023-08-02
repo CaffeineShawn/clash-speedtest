@@ -7,6 +7,18 @@
 
 `Clash` 节点测速
 
+
+## Dry Run
+
+```bash
+git clone https://github.com/CaffeineShawn/clash-speedtest.git
+brew install go
+cd clash-speedtest
+export URL=CLASH_EXTERNAL_CONTROLLER \
+PROXY=CLASH_LAN_PROXY
+go run main.go
+```
+
 ## Configure
 
 | Variable | Type         | Default               | Description                      |
