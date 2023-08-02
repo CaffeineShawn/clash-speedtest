@@ -14,8 +14,8 @@
 git clone https://github.com/CaffeineShawn/clash-speedtest.git
 brew install go
 cd clash-speedtest
-export URL=CLASH_EXTERNAL_CONTROLLER \
-PROXY=CLASH_LAN_PROXY
+export URL={{CLASH_EXTERNAL_CONTROLLER_URL}}
+export PROXY={{CLASH_LAN_PROXY_URL}}
 go run main.go
 ```
 
