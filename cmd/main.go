@@ -188,7 +188,7 @@ func deferSpeedtest() {
 			clashCli := clash.New(config.GetString("url"), config.GetString("secret"))
 			optimumNodeResult := results[0]
 			err = clashCli.SetProxy(optimumNodeResult.Name)
-			if err != nil {
+			if err == nil {
 				log.Info().Msgf("Selected node: %s for online serfing🏄🏻, bandwidth: %s, latency: %dms, enjoy!", optimumNodeResult.Name, formatMeter(optimumNodeResult.BS), optimumNodeResult.ConnectDuration.Milliseconds())
 			} else {
 				log.Error().Msgf("Select node: %s error, reason: %s", optimumNodeResult.Name, err)
